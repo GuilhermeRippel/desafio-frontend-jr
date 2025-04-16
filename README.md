@@ -1,59 +1,71 @@
-# DesafioFrontendSimfrete
+# 💻 Desafio Frontend Jr - Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+Este repositório contém a resolução do **Desafio Frontend Jr**, cujo objetivo é avaliar habilidades práticas com **Angular**, além de conhecimentos de **HTML**, **CSS**, consumo de **APIs RESTful** e uso de **Angular Forms**.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologias utilizadas
 
-```bash
-ng serve
-```
+- Angular
+- TypeScript
+- HTML5
+- CSS3
+- OpenWeatherMap API
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 📌 Objetivo
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+O desafio foi dividido em duas partes principais:
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 🌤️ Desafio 1 - Previsão do Tempo
 
-```bash
-ng generate --help
-```
+**Objetivo:**  
+Criar uma aplicação funcional que consulte uma API de previsão do tempo, permitindo ao usuário inserir o nome de uma cidade e visualizar sua previsão atual.
 
-## Building
+**Requisitos:**
 
-To build the project run:
+- Campo para digitar o nome da cidade.
+- Exibição das informações de clima atual da cidade informada.
+- Possibilidade de realizar novas consultas.
 
-```bash
-ng build
-```
+**API Utilizada:**  
+[OpenWeatherMap](https://openweathermap.org/)  
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+### 🪪 Desafio 2 - Cartão de Visitas
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+**Objetivo:**  
+Desenvolver um formulário dividido em duas seções para coleta de informações pessoais e de endereço, e com base nesses dados, gerar um cartão de visitas com a visualização dos dados inseridos.
 
-```bash
-ng test
-```
+**Campos do formulário:**
 
-## Running end-to-end tests
+**Seção 1 – Dados Pessoais:**
+- Nome
+- Idade
+- Telefone
+- E-mail
 
-For end-to-end (e2e) testing, run:
+**Seção 2 – Endereço:**
+- Endereço
+- Número
+- Bairro
+- Cidade
 
-```bash
-ng e2e
-```
+**Requisitos:**
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- Validações de campos obrigatórios.
+- Estruturação e estilização com HTML e CSS.
+- Uso de Angular Forms para controle dos dados.
+- Exibição dos dados formatados ao clicar em "Finalizar".
 
-## Additional Resources
+## 🛠️ Como executar o projeto
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Clone este repositório:
+   ```bash
+   1 git clone https://github.com/GuilhermeRippel/desafio-frontend-jr.git
+   2 npm install
+   3 npm run start
