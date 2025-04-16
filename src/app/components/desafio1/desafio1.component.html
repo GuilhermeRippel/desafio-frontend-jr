@@ -1,0 +1,17 @@
+<div class="mainContainer">
+    <h1>Clima Tempo</h1>
+  
+    <div class="searchContainer">
+      <input type="text" [(ngModel)]="city" placeholder="Digite a cidade" />
+      <button (click)="getWeather()">Buscar</button>
+    </div>
+  
+    <div *ngIf="weatherData" class="informationsContainer">
+      <h2>{{ weatherData.name }}</h2>
+      <p>🌡️ Temperatura: {{ weatherData.main.temp.toFixed(0) }} °C</p>
+      <p>☁️ Clima: {{ weatherData.weather[0].description }}</p>
+      <p>💧 Umidade: {{ weatherData.main.humidity }} %</p>
+      <p>💨 Vento: {{ weatherData.wind.speed }} km/h</p>
+    </div>
+  </div>
+  

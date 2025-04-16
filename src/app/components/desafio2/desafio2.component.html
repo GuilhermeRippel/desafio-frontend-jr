@@ -1,0 +1,70 @@
+<div class="mainContainer">
+    <h1 *ngIf="etapaFormulario === 1 || etapaFormulario === 2">Preencha o formulário</h1>
+    <h1 *ngIf="etapaFormulario === 3">Dados Cadastrados</h1>
+
+    <div class="formContainer" *ngIf="etapaFormulario === 1">
+        <div class="inputContainer">
+            <label>Nome:</label>
+            <input type="text" [(ngModel)]="nome" placeholder="Digite seu nome">
+        </div>
+
+        <div class="inputContainer">
+            <label>Idade:</label>
+            <input type="number" [(ngModel)]="idade" placeholder="Digite sua idade">
+        </div>
+
+        <div class="inputContainer">
+            <label>Telefone:</label>
+            <input type="number" [(ngModel)]="telefone" placeholder="Digite seu telefone">
+        </div>
+
+        <div class="inputContainer">
+            <label>Email:</label>
+            <input type="email" [(ngModel)]="email" placeholder="Digite seu email" required email #emailInput="ngModel">
+        </div>
+
+        <button (click)="avancarFormulario()">Avançar Etapa</button>
+    </div>
+
+
+    
+
+    <div class="formContainer" *ngIf="etapaFormulario === 2">
+        <div class="inputContainer">
+            <label>Endereço:</label>
+            <input type="text" [(ngModel)]="endereco" placeholder="Digite seu endereço">
+        </div>
+
+        <div class="inputContainer">
+            <label>Número:</label>
+            <input type=" number" [(ngModel)]="numero" placeholder="Número">
+        </div>
+
+        <div class="inputContainer">
+            <label>Bairro:</label>
+            <input type="text" [(ngModel)]="bairro" placeholder="Digite seu bairro">
+        </div>
+
+        <div class="inputContainer">
+            <label>Cidade:</label>
+            <input type="email" [(ngModel)]="cidade" placeholder="Digite sua cidade">
+        </div>
+
+        <div class="buttonContainer">
+            <button (click)="voltarFormulario()">Voltar Etapa</button>
+            <button (click)="exibirDados()">Finalizar</button>
+        </div>
+    </div>
+
+    <div class="cardContainer" *ngIf="etapaFormulario === 3 && dadosExibidos">
+        <div class="card">
+          <p><strong>👤 Nome:</strong> {{ dadosExibidos.nome }}</p>
+          <p><strong>🎂 Idade:</strong> {{ dadosExibidos.idade }}</p>
+          <p><strong>📞 Telefone:</strong> {{ dadosExibidos.telefone }}</p>
+          <p><strong>📧 Email:</strong> {{ dadosExibidos.email }}</p>
+          <p><strong>🏠 Endereço:</strong> {{ dadosExibidos.endereco }}, Nº {{ dadosExibidos.numero }}</p>
+          <p><strong>🏙️ Bairro:</strong> {{ dadosExibidos.bairro }}</p>
+          <p><strong>🌆 Cidade:</strong> {{ dadosExibidos.cidade }}</p>
+        </div>
+      </div>
+</div>
